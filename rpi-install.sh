@@ -6,16 +6,15 @@ set -e
 echo "Installing dependencies"
 sudo apt update
 sudo apt install -y build-essential cmake git libfftw3-dev libglfw3-dev libglew-dev libvolk2-dev libzstd-dev libsoapysdr-dev libairspyhf-dev libairspy-dev \
-            libiio-dev libad9361-dev librtaudio-dev libhackrf-dev librtlsdr-dev libbladerf-dev liblimesuite-dev p7zip-full wget
+            libiio-dev libad9361-dev librtaudio-dev libhackrf-dev librtlsdr-dev libbladerf-dev liblimesuite-dev p7zip-full wget libzstd-dev
             
 git clone https://github.com/AlexandreRouma/SDRPlusPlus
 cd SDRPlusPlus            
 
 echo "Preparing build"
-sudo mkdir -p build
-cd build
+sudo mkdir -p build/CMakeFiles
+cd build/CMakeFiles
 
-sudo mkdir -p CMakeFiles
 sudo cmake .. -DOPT_BUILD_RTL_SDR_SOURCE=ON
 
 echo "Building"
@@ -25,5 +24,3 @@ echo "Installing"
 sudo make install
 
 echo "Done!"
-
-### modded by TekMaker 26/3/2022
