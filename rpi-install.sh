@@ -13,7 +13,7 @@ cd SDRPlusPlus
 
 echo "Preparing build"
 sudo mkdir -p build/CMakeFiles
-cd build/CMakeFiles
+cd build
 
 sudo cmake .. -DOPT_BUILD_RTL_SDR_SOURCE=ON
 
