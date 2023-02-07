@@ -23,6 +23,6 @@ sudo make
 echo "Installing"
 sudo make install
 
-sudp ldconfig
+sudo ldconfig
 
 echo "Done!"
