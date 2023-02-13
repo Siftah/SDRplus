@@ -15,7 +15,7 @@ echo "Preparing build"
 sudo mkdir -p build/CMakeFiles
 cd build
 
-sudo cmake .. -DOPT_BUILD_RTL_SDR_SOURCE=ON
+sudo cmake .. -DOPT_BUILD_RTL_SDR_SOURCE=ON -DOPT_BUILD_SDRPLAY_SOURCE:BOOL=ON -DOPT_BUILD_M17_DECODER:BOOL=ON
 
 echo "Building"
 sudo make
